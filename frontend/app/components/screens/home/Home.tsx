@@ -1,15 +1,21 @@
 import { FC } from 'react'
+import { toastr } from 'react-redux-toastr'
 
-import Layout from '@/components/layout/Layout'
+import Heading from '@/components/UI/Heading/Heading'
+
+import Meta from '@/utils/Meta/Meta'
 
 import styles from './Home.module.scss'
 import { IHome } from './home.interface'
 
 const Home: FC<IHome> = () => {
 	return (
-		<Layout>
-			<h1 className={styles.title}>тест тест тест</h1>
-		</Layout>
+		<Meta
+			title="Seleznev Cinema"
+			description="Watch movies and multfilms online or stream right to your browser"
+		>
+			<Heading title="Watch movies online" className="mb-8 text-xl" />
+		</Meta>
 	)
 }
 

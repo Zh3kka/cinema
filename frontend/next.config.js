@@ -9,6 +9,7 @@ const nextConfig = {
 	},
 	experimental: {
 		appDir: true,
+		newNextLinkBehavior: false,
 	},
 	async rewrites() {
 		return [

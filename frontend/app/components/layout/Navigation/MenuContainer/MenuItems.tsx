@@ -9,11 +9,11 @@ import styles from './Menu.module.scss'
 import { IMenuItem } from './menu.interface'
 
 const MenuItems: FC<{ item: IMenuItem }> = ({ item }) => {
-	const router = useRouter()
+	const { asPath } = useRouter()
 	return (
 		<li
 			className={cn({
-				[styles.active]: router.asPath === item.link,
+				[styles.active]: asPath === item.link,
 			})}
 		>
 			<Link href={item.link} legacyBehavior>

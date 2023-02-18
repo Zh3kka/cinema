@@ -20,7 +20,7 @@
             }
             &.active {
                 @apply border-r-primary;
-                >a >span {
+                >a, >span {
                     @apply text-white;
                 }
                 >a >svg {
