@@ -12,6 +12,7 @@ import styles from './Auth.module.scss'
 import AuthFields from './AuthFields'
 import { IAuthInput } from './auth.interface'
 import { useAuthRedirect } from './useAuthRedirect'
+import { useActions } from '@/hooks/useActions'
 
 const Auth: FC = () => {
 	useAuthRedirect()
@@ -29,12 +30,7 @@ const Auth: FC = () => {
 		mode: 'onChange',
 	})
 
-	const login = (data: any) => {
-		console.table(data)
-	}
-	const register = (data: any) => {
-		console.table(data)
-	}
+	const {login, register} = useActions()
 
 	const onSubmit: SubmitHandler<IAuthInput> = (data) => {
 		if (type === 'login') login(data)
